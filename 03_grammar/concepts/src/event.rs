@@ -60,6 +60,10 @@ fn main() {
         event1, event2, event3
     );
 
+    println!(
+        "User: {:?}, User: {:?}, topic: {:?}, topic: {:?}",
+        alice.name, bob.gender, topic.name, topic.owner
+    );
     // pattern match event
     process_event(&event1);
     process_event(&event2);
