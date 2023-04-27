@@ -54,6 +54,7 @@ fn main() {
     let event1 = Event::Join((alice.id, topic.id));
     let event2 = Event::Join((bob.id, topic.id));
     let event3 = Event::Message((alice.id, topic.id, "Hello world!".into()));
+    let event4 = Event::Leave((alice.id, topic.id));
 
     println!(
         "event1: {:?}, event2: {:?}, event3: {:?}",
@@ -68,6 +69,7 @@ fn main() {
     process_event(&event1);
     process_event(&event2);
     process_event(&event3);
+    process_event(&event4);
 }
 
 fn process_event(event: &Event) {

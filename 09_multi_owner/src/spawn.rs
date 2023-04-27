@@ -1,4 +1,3 @@
-
 // fn main() {
 //     let  arr = vec![1];
 //
@@ -16,6 +15,6 @@ fn main() {
         println!("thread: {:?}", s1);
     });
     println!("main: {:?}", s);
-    
+
     handler.join().unwrap();
 }
